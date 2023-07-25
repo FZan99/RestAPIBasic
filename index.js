@@ -59,8 +59,8 @@ app.post('/users', (req, res) => {
 })
 
 app.put('/users', (req, res) => {
-  //update all names
-
+  //update all names in array
+  //not db
   const newName = req.body.newName
 
   userList = userList.map((value) => {
@@ -71,6 +71,7 @@ app.put('/users', (req, res) => {
 })
 
 app.delete('/users/:id', (req, res) => {
+  //not related to db
   const id = req.params.id
   let idFound = false
 
